@@ -1,6 +1,9 @@
 import React from 'react';
 import { HashRouter, Switch, Route, Redirect } from 'react-router-dom';
 
+// 引入css样式
+import 'antd-mobile/dist/antd-mobile.css';
+
 // 组件
 import Home from './Home/Home';
 import Beff from './Home/Beff';
@@ -20,6 +23,7 @@ import Allshop from './Shop/Allshop';
 
 // 公共样式
 import '../assets/css/reset.min.css';
+import Tab from '../components/Tab';
 
 export default class App extends React.Component {
   render() {
@@ -42,6 +46,7 @@ export default class App extends React.Component {
         <Route path='/allorder' component={Allorder} />
         <Redirect to='/' />
       </Switch>
+      <Tab/>
     </HashRouter>
   }
 };
