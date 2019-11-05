@@ -1,21 +1,27 @@
 import React from 'react';
-import { SearchBar, Carousel, WhiteSpace, WingBlank } from 'antd-mobile';
-import '../../pages/Home/Home.less';
+import { SearchBar, Carousel, WhiteSpace, WingBlank, Grid } from 'antd-mobile';
+import './home.less';
 import { connect } from 'react-redux';
 
-class Home extends React.Component {
+const data = Array.from(new Array(4)).map((_val, i) => ({
+    icon: 'https://gw.alipayobjects.com/zos/rmsportal/nywPmnTAvTmLusPxHPSu.png',
+    text: `name${i}`,
+  }));
+export default class Home extends React.Component {
     handleClick = () => {
         this.manualFocusInst.focus();
     }
     render() {
         return <div className="main-box">
-            <div className="search" style={{backgroundColor:'white'}}>
+            <h2>美肉商城</h2>
+            <div className="search" style={{ backgroundColor: 'white' }}>
                 <SearchBar
                     placeholder="搜索商品"
                     ref={ref => this.manualFocusInst = ref}
                 />
                 <WhiteSpace />
             </div>
+            {/* 轮播图 */}
             <div className="main-body">
                 <WingBlank>
                     <Carousel
@@ -43,6 +49,9 @@ class Home extends React.Component {
                     </Carousel>
                 </WingBlank>
             </div>
+            {/* 分类区域 */}
+            <div className="sub-title"></div>
+            <Grid data={data} hasLine={false} />
         </div>
     }
     state = {
