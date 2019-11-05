@@ -4,9 +4,10 @@ import './Tab.less';
 
 function Tab(props) {
     let pathName = props.location.pathname,
-        flag = /(Home|allorder|allshop)/i.test(pathName);
+        flag = /!()/i.test(pathName);
     return <>
         {flag ? null : <div className='tab'>
+
             <NavLink className="link" to='/' exact>
                 <i className="icon"></i>
                 <span>首页</span>

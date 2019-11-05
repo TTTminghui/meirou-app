@@ -9,7 +9,6 @@ class Home extends React.Component {
     }
     render() {
         return <div className="main-box">
-            <h2>美肉商城</h2>
             <div className="search" style={{backgroundColor:'white'}}>
                 <SearchBar
                     placeholder="搜索商品"
@@ -58,5 +57,3 @@ class Home extends React.Component {
         }, 100);
     }
 }
-
-export default Home;
