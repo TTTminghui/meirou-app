@@ -1,9 +1,6 @@
 import React from 'react';
 import { HashRouter, Switch, Route, Redirect } from 'react-router-dom';
 
-// 引入css样式
-import 'antd-mobile/dist/antd-mobile.css';
-
 // 组件
 import Home from './Home/Home';
 import Beff from './Home/Beff';
