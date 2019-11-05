@@ -2,10 +2,13 @@ import React from 'react';
 import { connect } from 'react-redux';
 import Tab from '../../components/Tab';
 
-function Shop(props) {
-    return <div>
-        商城
-    </div>
+class Shop extends React.Component{
+    render(){
+        return <div>
+            商城
+            <Tab />
+        </div>
+    }
 }
 
 export default Shop;

@@ -6,6 +6,7 @@ import shop from './Shop';
 import Confirm from './Confirm';
 import Details from './Details';
 import Pay from './Pay';
+import Tab from '../../components/Tab';
 
 
 function Allshop(props) {
@@ -15,7 +16,6 @@ function Allshop(props) {
         <Route path='/allshop/details' component={Details} />
         <Route path='/allshop/pay' component={Pay} />
         <Redirect to='/allshop' />
-
     </Switch>
 }
 

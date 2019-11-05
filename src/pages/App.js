@@ -43,6 +43,7 @@ export default class App extends React.Component {
         <Route path='/allorder' component={Allorder} />
         <Redirect to='/' />
       </Switch>
+      
       <Tab/>
     </HashRouter>
   }
