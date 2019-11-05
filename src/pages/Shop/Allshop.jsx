@@ -6,7 +6,6 @@ import shop from './Shop';
 import Confirm from './Confirm';
 import Details from './Details';
 import Pay from './Pay';
-import Tab from '../../components/Tab';
 
 
 function Allshop(props) {
