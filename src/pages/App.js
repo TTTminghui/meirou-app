@@ -20,6 +20,7 @@ import Allshop from './Shop/Allshop';
 
 // 公共样式
 import '../assets/css/reset.min.css';
+import Tab from '../components/Tab';
 
 export default class App extends React.Component {
   render() {
@@ -42,6 +43,8 @@ export default class App extends React.Component {
         <Route path='/allorder' component={Allorder} />
         <Redirect to='/' />
       </Switch>
+      
+      <Tab/>
     </HashRouter>
   }
 };
