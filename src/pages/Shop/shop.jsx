@@ -2,9 +2,9 @@ import React from 'react';
 import { connect } from 'react-redux';
 import './shop.less';
 import { SearchBar, Button, WhiteSpace, WingBlank } from 'antd-mobile';
+import { Drawer, List, NavBar, Icon } from 'antd-mobile';
 
 export default class Shop extends React.Component {
-<<<<<<< HEAD
     state = {
         value: '',
     };
@@ -30,13 +30,6 @@ export default class Shop extends React.Component {
                 onChange={this.onChange}
             />
         </div>);
-=======
-    
-    render() {
-        return <div>
-            商城
-        </div>
->>>>>>> f45c9de3726b889469aed16bda9166611c7dad1b
     }
 }
 
