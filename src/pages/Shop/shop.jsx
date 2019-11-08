@@ -16,6 +16,7 @@ export default class Shop extends React.Component {
         this.setState({ value: '' });
       };
     render() {
+<<<<<<< HEAD
         return (<div>
             <WingBlank><div className="sub-title">全部商品</div></WingBlank>
            
@@ -79,3 +80,10 @@ class App1 extends React.Component {
 
 // ReactDOM.render(<App1 />, mountNode);
 
+=======
+        return <div>
+            
+        </div>
+    }
+}
+>>>>>>> a023f549de3e57efa1f4f280c6107383b6996c41
