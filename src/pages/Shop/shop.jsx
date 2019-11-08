@@ -4,6 +4,8 @@ import { connect } from 'react-redux';
 export default class Shop extends React.Component {
     
     render() {
-        return 
+        return <div>
+            
+        </div>
     }
 }
