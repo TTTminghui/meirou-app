@@ -1,6 +1,6 @@
 import React from 'react';
 import { SearchBar, Carousel, WhiteSpace, WingBlank, Grid } from 'antd-mobile';
-import './home.less';
+import './Home.less';
 import { connect } from 'react-redux';
 
 const data = Array.from(new Array(4)).map((_val, i) => ({

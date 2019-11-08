@@ -8,7 +8,7 @@ import Pig from './Home/Pig';
 import Poultry from './Home/Poultry';
 import Processing from './Home/Processing';
 import Search from './Home/Search';
-import login from './Login/login';
+import WrappedNormalLoginForm from './Login/WrappedNormalLoginForm';
 import Set from './My/Set/Set';
 import Customer from './My/Customer';
 import Enterprise from './My/Enterprise';
@@ -33,7 +33,7 @@ export default class App extends React.Component {
         <Route path='/processing' component={Processing} />
         <Route path='/my' component={My} />
         <Route path='/allshop' component={Allshop} />
-        <Route path='/login' component={login} />
+        <Route path='/login' component={WrappedNormalLoginForm} />
         <Route path='/search' component={Search} />
         <Route path='/set' component={Set} />
         <Route path='/customer' component={Customer} />
@@ -43,7 +43,6 @@ export default class App extends React.Component {
         <Route path='/allorder' component={Allorder} />
         <Redirect to='/' />
       </Switch>
-      
       <Tab/>
     </HashRouter>
   }
