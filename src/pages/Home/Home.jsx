@@ -1,20 +1,28 @@
 import React from 'react';
-import { SearchBar, Carousel, WhiteSpace, WingBlank, Grid } from 'antd-mobile';
+import { SearchBar, WhiteSpace, NavBar } from 'antd-mobile';
 import './home.less';
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+import Banner from './Banner';
+import Tuijian from './Tuijain';
 
-const data = Array.from(new Array(4)).map((_val, i) => ({
-    icon: 'https://gw.alipayobjects.com/zos/rmsportal/nywPmnTAvTmLusPxHPSu.png',
-    text: `name${i}`,
-  }));
+
 export default class Home extends React.Component {
-    handleClick = () => {
-        this.manualFocusInst.focus();
+    constructor(props) {
+        super(props);
+        this.state={
+
+        }
     }
     render() {
         return <div className="main-box">
-            <h2>美肉商城</h2>
-            <div className="search" style={{ backgroundColor: 'white' }}>
+            <NavBar
+                mode="light"
+            >美肉商城</NavBar>
+            <div className="search" style={{ backgroundColor: 'white' }}
+            onClick={ev=>{
+                this.props.history.push('./search');
+            }}>
                 <SearchBar
                     placeholder="搜索商品"
                     ref={ref => this.manualFocusInst = ref}
@@ -23,46 +31,47 @@ export default class Home extends React.Component {
             </div>
             {/* 轮播图 */}
             <div className="main-body">
-                <WingBlank>
-                    <Carousel
-                        autoplay={true}
-                        infinite={true}
-                        autoplayInterval='1000'
-                    >
-                        {this.state.data.map(val => (
-                            <a
-                                key={val}
-                                href=""
-                                style={{ display: 'inline-block', width: '100%', height: this.state.imgHeight }}
-                            >
-                                <img
-                                    src={`https://zos.alipayobjects.com/rmsportal/${val}.png`}
-                                    alt=""
-                                    style={{ width: '100%', verticalAlign: 'top' }}
-                                    onLoad={() => {
-                                        window.dispatchEvent(new Event('resize'));
-                                        this.setState({ imgHeight: 'auto' });
-                                    }}
-                                />
-                            </a>
-                        ))}
-                    </Carousel>
-                </WingBlank>
+                <Banner />
             </div>
             {/* 分类区域 */}
-            <div className="sub-title"></div>
-            <Grid data={data} hasLine={false} />
+            <div className="fenlei">
+                <div  onClick={ev=>{
+                this.props.history.push('./pig');
+            }}>
+                    <span><img src="http://image4.suning.cn/uimg/b2c/newcatentries/0070182138-000000010119947958_1_800x800.jpg"
+                        alt="" /></span>
+                    <p>猪肉专区</p>
+                </div>
+                <div  onClick={ev=>{
+                this.props.history.push('./poultry');
+            }}>
+                    <span>
+                        <img src="http://img3.imgtn.bdimg.com/it/u=1094693650,1364324201&fm=26&gp=0.jpg" alt="" />
+                    </span>
+                    <p>禽类专区</p>
+                </div>
+                <div  onClick={ev=>{
+                this.props.history.push('./beff');
+            }}>
+                    <span>
+                        <img src="http://img4.imgtn.bdimg.com/it/u=3525294997,3112360321&fm=26&gp=0.jpg" alt="" />
+                    </span>
+                    <p>牛肉专区</p>
+                </div>
+                <div  onClick={ev=>{
+                this.props.history.push('./processing');
+            }}>
+                    <span>
+                        <img src="http://img1.imgtn.bdimg.com/it/u=3720685585,4180025098&fm=26&gp=0.jpg" alt="" />
+                    </span>
+                    <p>加工产品</p>
+                </div>
+            </div>
+            {/* 推荐专区 */}
+            <div className="tuijian">
+                <h4>推荐专区</h4>
+                <Tuijian />
+            </div>
         </div>
-    }
-    state = {
-        data: ['1', '2', '3'],
-        imgHeight: 176,
-    }
-    componentDidMount() {
-        setTimeout(() => {
-            this.setState({
-                data: ['AiyWuByWklrrUDlFignR', 'TekJlZRVCjLFexlOCuWn', 'IJOtIlfsYdTyaDTRVrLI'],
-            });
-        }, 100);
     }
 }
