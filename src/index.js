@@ -9,7 +9,6 @@ import App from './pages/App';
 // 引入css样式
 import 'antd-mobile/dist/antd-mobile.css';
 
-
 React.Component.prototype.$api = api;
 React.PureComponent.prototype.$api = api;
 
