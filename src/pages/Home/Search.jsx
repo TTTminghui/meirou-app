@@ -3,13 +3,12 @@ import { SearchBar, Icon, WhiteSpace, Flex } from 'antd-mobile';
 import './search.less';
 import { connect } from 'react-redux';
 
-
 export default class Search extends React.Component {
     render() {
         return <div className="main-box">
             <Icon type="left"
                 onClick={ev => {
-                    this.props.history.push('/home');
+                    this.props.history.go(-1);
                 }} />
             <h2>美肉商城</h2>
             <div className="search" style={{ backgroundColor: 'white' }}>
