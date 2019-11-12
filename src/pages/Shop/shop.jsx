@@ -1,23 +1,18 @@
 import React from 'react';
+<<<<<<< HEAD
 import { connect } from 'react-redux';
+=======
+>>>>>>> e2a54a99bc53a19fb02f6d173502e0f0f36f422c
 import './shop.less';
-import { SearchBar, Button, WhiteSpace, WingBlank } from 'antd-mobile';
-import { Drawer, List, NavBar, Icon } from 'antd-mobile';
+import '../Home/search.less'
+import { SearchBar, WhiteSpace } from 'antd-mobile';
+
 
 export default class Shop extends React.Component {
-    state = {
-        value: '',
-    };
-    onChange= (value) => {
-        this.setState({ value });
-      };
-      clear = () => {
-        this.setState({ value: '' });
-      };
     render() {
-        return (<div>
-            <WingBlank><div className="sub-title">全部商品</div></WingBlank>
+        return <div className="main-box">
            
+<<<<<<< HEAD
             <SearchBar
                 value={this.state.value}
                 placeholder="搜索商品"
@@ -33,3 +28,27 @@ export default class Shop extends React.Component {
     }
 }
 
+=======
+
+
+            <div className="right">
+                <div className="zhu" onClick={ev => {
+                    this.props.history.push('/allshop/dapai');
+                }}>
+                    <img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2473589736,1100715802&fm=26&gp=0.jpg" alt="" />
+                    <p>带骨大牌</p>
+                </div>
+                <div className="zhu">
+                    <img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2473589736,1100715802&fm=26&gp=0.jpg" alt="" />
+                    <p>带骨大牌</p>
+                </div>
+                <div className="zhu">
+                    <img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2473589736,1100715802&fm=26&gp=0.jpg" alt="" />
+                    <p>带骨大牌</p>
+                </div>
+            </div>
+
+        </div>
+    }
+}
+>>>>>>> e2a54a99bc53a19fb02f6d173502e0f0f36f422c
