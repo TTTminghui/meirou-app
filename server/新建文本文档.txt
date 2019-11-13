@@ -1,0 +1,49 @@
+获取全部商品信息
+URL ：/allshop
+METHOD ：GET,
+RESULT ：{
+  data : {
+	"id":1,
+	"shopname":"[巴西377]带骨大排",
+	"class":"进口猪肉",
+	"name":"带骨大排",
+	"time":"2019-11-06T01:20:30.000Z",
+	"weight":"/吨",
+	"price":53000,
+	"imgid":null,
+	"from":"上海港"
+}
+
+获取分类商品
+URL ：/shop?name=带骨大排
+   name:分类名称
+METHOD ：GET,
+RESULT ：{
+  data : {
+	"id":1,
+	"shopname":"[巴西377]带骨大排",
+	"class":"进口猪肉",
+	"name":"带骨大排",
+	"time":"2019-11-06T01:20:30.000Z",
+	"weight":"/吨",
+	"price":53000,
+	"imgid":null,
+	"from":"上海港"
+}
+
+商品模糊搜索
+URL ：/search?name=巴西337
+   name:商品名称
+METHOD ：GET,
+RESULT ：{
+  data : {
+	"id":1,
+	"shopname":"[巴西377]带骨大排",
+	"class":"进口猪肉",
+	"name":"带骨大排",
+	"time":"2019-11-06T01:20:30.000Z",
+	"weight":"/吨",
+	"price":53000,
+	"imgid":null,
+	"from":"上海港"
+}
