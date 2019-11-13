@@ -5,8 +5,6 @@ import { NavBar } from 'antd-mobile';
 import { NavLink } from 'react-router-dom';
 import './WrappedNormalLoginForm.less';
 import login from '../../api/index'
-import { reject } from 'q';
-import { resolve } from 'dns';
 
 export default class ErrorInputExample extends React.Component {
     state = {
@@ -82,7 +80,6 @@ export default class ErrorInputExample extends React.Component {
                         loginInfo: "check-circle-o"
                     });
                 }, 5000);
-                resolve();
             }).catch().then(() => {
                 login.login.queryLogin(this.state.name, this.test)
             });
@@ -108,8 +105,8 @@ export default class ErrorInputExample extends React.Component {
     }
 
     LoginTo = () => {
-        console.log('跳转咯');
-
+        login.login.queryLogin(this.state.name, this.test);
+        this.props.history.go(-1);
     }
 
     componentWillUnmount() {

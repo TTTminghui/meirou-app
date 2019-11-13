@@ -1,54 +1,91 @@
 import React from 'react';
-<<<<<<< HEAD
-import { connect } from 'react-redux';
-=======
->>>>>>> e2a54a99bc53a19fb02f6d173502e0f0f36f422c
 import './shop.less';
-import '../Home/search.less'
+import '../Home/search.less';
 import { SearchBar, WhiteSpace } from 'antd-mobile';
+import api from '../../api'
 
 
 export default class Shop extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            value: '进口猪肉',
+            root1: '进口猪肉',
+            root2: '国产猪肉',
+            root3: '鸡产品',
+            root4: '鸭产品',
+            root5: '进口牛肉',
+            root6: '加工产品',
+            mainShop: []
+        }
+    }
+    setStateAsync(state) {
+        return new Promise((resolve) => {
+            this.setState(state, resolve)
+        });
+    }
+    async setValueType(name) {
+        console.log(name);
+
+        await this.setStateAsync({ value: name });
+        console.log(this.state.value);
+        this.forceUpdateMy();
+    }
+    forceUpdateMy = () => {
+        api.shopType.queryShopType(this.state.value).then(result => {
+            this.setState({ mainShop: result.data })
+        });
+    }
+    componentDidMount() {
+        api.shopType.queryShopType(this.state.value).then(result => {
+            this.setState({ mainShop: result.data })
+        });
+    };
     render() {
         return <div className="main-box">
-           
-<<<<<<< HEAD
-            <SearchBar
-                value={this.state.value}
-                placeholder="搜索商品"
-                onSubmit={value => console.log(value, 'onSubmit')}
-                onClear={value => console.log('onClear')}
-                onFocus={() => console.log('onFocus')}
-                onBlur={() => console.log('onBlur')}
-                onCancel={() => console.log('onCancel')}
-                showCancelButton
-                onChange={this.onChange}
-            />
-        </div>);
-    }
-}
+            <h2>美肉商城</h2>
+            <div className="search" style={{ backgroundColor: 'white' }}
+                onClick={ev => {
+                    this.props.history.push('./search')
+                }}>
+                <SearchBar
+                    placeholder="搜索商品"
+                    ref={ref => this.manualFocusInst = ref}
+                />
+                <WhiteSpace />
+            </div>
 
-=======
-
+            <div className="main-oo">
+                <div className="r">
+                    <div onClick={() => { this.setValueType('进口猪肉') }}>{this.state.root1}</div>
+                </div>
+                <div className="r">
+                    <div onClick={() => { this.setValueType('国产猪肉') }}>{this.state.root2}</div>
+                </div>
+                <div className="r">
+                    <div onClick={() => { this.setValueType('鸡产品') }}>{this.state.root3}</div>
+                </div>
+                <div className="r">
+                    <div onClick={() => { this.setValueType('鸭产品') }}>{this.state.root4}</div>
+                </div>
+                <div className="r">
+                    <div onClick={() => { this.setValueType('进口牛肉') }}>{this.state.root5}</div>
+                </div>
+                <div className="r">
+                    <div onClick={() => { this.setValueType('加工产品') }}>{this.state.root6}</div>
+                </div>
+            </div>
 
             <div className="right">
-                <div className="zhu" onClick={ev => {
-                    this.props.history.push('/allshop/dapai');
-                }}>
-                    <img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2473589736,1100715802&fm=26&gp=0.jpg" alt="" />
-                    <p>带骨大牌</p>
-                </div>
-                <div className="zhu">
-                    <img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2473589736,1100715802&fm=26&gp=0.jpg" alt="" />
-                    <p>带骨大牌</p>
-                </div>
-                <div className="zhu">
-                    <img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2473589736,1100715802&fm=26&gp=0.jpg" alt="" />
-                    <p>带骨大牌</p>
-                </div>
+                {this.state.mainShop.map(item => {
+                    return <div className="zhu" onClick={(ev, name = item.name) => { this.props.history.push('/allshop/details?name=' + name); }}
+                        key={item.id}>
+                        <img src={item.img} alt="" />
+                        <p>{item.name}</p>
+                    </div>
+                })}
             </div>
 
         </div>
     }
 }
->>>>>>> e2a54a99bc53a19fb02f6d173502e0f0f36f422c

@@ -4,7 +4,7 @@ import './Tab.less';
 
 function Tab(props) {
     let pathName = props.location.pathname,
-        flag = /!()/i.test(pathName);
+        flag =  !/^\/((home|allshop|my)|)$/i.test(pathName);
     return <>
         {flag ? null : <div className='tab'>
 

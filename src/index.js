@@ -6,7 +6,8 @@ import {
 import store from './store/index';
 import api from './api/index';
 import App from './pages/App';
-import 'antd-mobile/dist/antd-mobile.css';  // or 'antd-mobile/dist/antd-mobile.less'
+// 引入css样式
+import 'antd-mobile/dist/antd-mobile.css';
 
 React.Component.prototype.$api = api;
 React.PureComponent.prototype.$api = api;

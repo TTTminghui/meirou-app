@@ -6,37 +6,43 @@ const data = [
     img: 'http://img1.imgtn.bdimg.com/it/u=3322415100,1316006249&fm=26&gp=0.jpg',
     title: '',
     des: '有机黑猪肉',
-    money:'998'
+    money:'998',
+    scd:'生产地：黑龙江'
   },
   {
     img: 'http://img0.imgtn.bdimg.com/it/u=1293807137,802605145&fm=26&gp=0.jpg',
     title: '',
     des: '新鲜猪肉',
-    money:'336'
+    money:'336',
+    scd:'生产地：黑龙江'
   },
   {
     img: 'http://img2.imgtn.bdimg.com/it/u=3054082434,3560009532&fm=26&gp=0.jpg',
     title: '',
     des: '万州绿色猪肉',
-    money:'4785'
+    money:'4785',
+    scd:'生产地：黑龙江'
   },
   {
     img: 'http://img4.imgtn.bdimg.com/it/u=3485637638,3063003930&fm=26&gp=0.jpg',
     title: '',
     des: '前腿猪肉',
-    money:'579'
+    money:'579',
+    scd:'生产地：黑龙江'
   },
   {
     img: 'http://img1.imgtn.bdimg.com/it/u=2321772870,3428929253&fm=26&gp=0.jpg',
     title: '',
     des: '冰冻猪肉',
-    money:'5963'
+    money:'5963',
+    scd:'生产地：黑龙江'
   },
   {
     img: 'http://img0.imgtn.bdimg.com/it/u=3105208722,2219902180&fm=26&gp=0.jpg',
     title: '',
     des: '红烧黑猪肉',
-    money:'42'
+    money:'42',
+    scd:'生产地：黑龙江'
   },
 ];
 const NUM_ROWS = 20;
@@ -121,6 +127,7 @@ export default class Tuijian extends React.Component {
             <div style={{ lineHeight: 1 }}>
               <div style={{ marginBottom: '8px', fontWeight: 'bold' }}>{obj.des}</div>
               <div><span style={{ fontSize: '30px', color: '#FF6E27' }}>¥{obj.money}</span></div>
+             <div className="wz">{obj.scd}</div>
             </div>
           </div>
         </div>

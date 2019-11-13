@@ -1,8 +1,12 @@
-.box {
+.box{
+ background: url('https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1573566317902&di=a1d9c30b737c7fc09511dd2d7c8f5d8b&imgtype=0&src=http%3A%2F%2Fimage2.sina.com.cn%2Fent%2Fd%2F2005-06-21%2FU105P28T3D758541F326DT20050621155848.jpg') no-repeat center center ;
+ background-size: cover;
+ color: rgb(192, 193, 255);
+
+.header {
   width    : 100%;
   height   : 2.5rem;
   font-size: 1rem;
-
   .icon {
     position: absolute;
     left    : .4rem;
@@ -14,7 +18,6 @@
   .text {
     position   : absolute;
     font-size  : 1rem;
-    color      : #333333;
     width      : 6rem;
     height     : 2rem;
     left       : 9rem;
@@ -29,7 +32,6 @@
   position  : relative;
   width     : 100%;
   height    : 8rem;
-  background: rgba(204, 204, 204, 1);
 
   .headSculpture {
     position     : absolute;
@@ -37,7 +39,6 @@
     top          : 2rem;
     width        : 4rem;
     height       : 4rem;
-    background   : #bcbcbc;
     border-radius: 50%;
     text-align   : center;
     line-height  : 4rem;
@@ -66,8 +67,6 @@
   margin-top   : .5rem;
   width        : 100%;
   height       : 5rem;
-  border-bottom: .05rem solid #cccccc;
-  border-top   : .05rem solid #cccccc;
 
   .text2 {
     position: absolute;
@@ -117,10 +116,6 @@
   width        : 100%;
   height       : 20rem;
 
-  li:nth-child(1)  {
-    border-top: .05rem solid #cccccc;
-  }
-
   .classifyList {
     display    : block;
     width      : 100%;
@@ -131,7 +126,12 @@
     li {
       padding-left : 3rem;
       position     : relative;
-      border-bottom: .05rem solid #cccccc;
+      .goAttestation{
+        position: absolute;
+        top:.2rem;
+        right: 2rem;
+        font-size: .7rem;
+      }
 
       .icon3 {
         position: absolute;
@@ -140,4 +140,5 @@
       }
     }
   }
+}
 }

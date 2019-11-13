@@ -6,15 +6,17 @@ import './my.less';
 
 export default class My extends React.Component {
     render() {
-        return <>
-            <div className="box">
-                <Icon className="icon" type="left" />
+        return <div className="box">
+            <div className="header">
+                <Icon className="icon" type="left" onClick={ev=>{
+                    this.props.history.push('/home')
+                }}/>
                 <span className="text">个人中心</span>
             </div>
             <div className="conner">
                 <div className="headSculpture">微信头像</div>
                 <span className="text1">注册/登录</span>
-                <div className="icon1"><a href="javascript:;"><img src={require('./1.png')} alt="" /></a></div>
+                <div className="icon1"><a href="javascript:;"></a></div>
             </div>
             <div className="curret">
                 <p className="text2"><span>我的订单</span>
@@ -32,12 +34,17 @@ export default class My extends React.Component {
             <div className="classify">
                 <ul className="classifyList">
                     <li>收货地址 <Icon className="icon3" type="right" /></li>
-                    <li>个人认证 <Icon className="icon3" type="right" /></li>
-                    <li>企业认证 <Icon className="icon3" type="right" /></li>
+                    <li onClick={ev => {
+                        this.props.history.push('/myself')
+                    }}>个人认证
+                       <span className="goAttestation"> 去认证</span>
+                        <Icon className="icon3" type="right" /></li>
+                    <li onClick={ev => { this.props.history.push('/')}}>企业认证
+                  <span className="goAttestation">去认证</span><Icon className="icon3" type="right" /></li>
                     <li>联系客服 <Icon className="icon3" type="right" /></li>
                     <li>设置 <Icon className="icon3" type="right" /></li>
                 </ul>
             </div>
-        </>
+        </div>
     }
 };

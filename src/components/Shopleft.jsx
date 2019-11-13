@@ -9,34 +9,19 @@ function Shopleft(props) {
                 <NavLink to='/allshop/dapai'>进口猪肉</NavLink>
             </div>
             <div className="r">
-                <NavLink to='/allshop/confimr'>进口猪肉</NavLink>
+                <NavLink to='/allshop/dapai'>国产猪肉</NavLink>
             </div>
             <div className="r">
-                <NavLink to='/allshop/confimr'>进口猪肉</NavLink>
+                <NavLink to='/allshop/dapai'>鸡产品</NavLink>
             </div>
             <div className="r">
-                <NavLink to='/allshop/confimr'>进口猪肉</NavLink>
+                <NavLink to='/allshop/dapai'>鸭产品</NavLink>
             </div>
             <div className="r">
-                <NavLink to='/allshop/confimr'>进口猪肉</NavLink>
+                <NavLink to='/allshop/dapai'>进口牛肉</NavLink>
             </div>
             <div className="r">
-                <NavLink to='/allshop/confimr'>进口猪肉</NavLink>
-            </div>
-            <div className="r">
-                <NavLink to='/allshop/confimr'>进口猪肉</NavLink>
-            </div>
-            <div className="r">
-                <NavLink to='/allshop/confimr'>进口猪肉</NavLink>
-            </div>
-            <div className="r">
-                <NavLink to='/allshop/confimr'>进口猪肉</NavLink>
-            </div><div className="r">
-                <NavLink to='/allshop/confimr'>进口猪肉</NavLink>
-            </div><div className="r">
-                <NavLink to='/allshop/confimr'>进口猪肉</NavLink>
-            </div><div className="r">
-                <NavLink to='/allshop/confimr'>进口猪肉</NavLink>
+                <NavLink to='/allshop/dapai'>加工产品</NavLink>
             </div>
         </div>
     </>
