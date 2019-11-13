@@ -25,8 +25,6 @@ export default class Shop extends React.Component {
         });
     }
     async setValueType(name) {
-        console.log(name);
-
         await this.setStateAsync({ value: name });
         console.log(this.state.value);
         this.forceUpdateMy();

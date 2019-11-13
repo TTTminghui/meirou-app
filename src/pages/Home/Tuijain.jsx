@@ -1,5 +1,5 @@
 import React from 'react';
-import { ListView } from 'antd-mobile';
+import { ListView} from 'antd-mobile';
 
 const data = [
   {

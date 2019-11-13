@@ -1,6 +1,6 @@
 import React from 'react';
-import { SearchBar, WhiteSpace, NavBar, NoticeBar, Icon } from 'antd-mobile';
-import './home.less';
+import { SearchBar, WhiteSpace, NavBar, NoticeBar} from 'antd-mobile';
+import './Home.less';
 import Banner from './Banner';
 import Tuijian from './Tuijain';
 

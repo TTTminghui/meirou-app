@@ -1,6 +1,6 @@
 import React from 'react';
 import {  Carousel,  WingBlank } from 'antd-mobile';
-import './home.less';
+import './Home.less';
 
 export default class Banner extends React.Component {
     render() {
@@ -8,7 +8,7 @@ export default class Banner extends React.Component {
             <Carousel
                 autoplay={true}
                 infinite={true}
-                autoplayInterval='2000'
+                autoplayInterval='2000' 
             >
                 {this.state.data.map(val => (
                     <a
